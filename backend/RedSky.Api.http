@@ -1,0 +1,6 @@
+@RedSky.Api_HostAddress = http://localhost:5034
+
+GET {{RedSky.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
