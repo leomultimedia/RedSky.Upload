@@ -52,7 +52,15 @@
               "target": "Package",
               "version": "[33.1.0, )"
             },
+            "EPPlus": {
+              "target": "Package",
+              "version": "[8.2.0, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[9.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[9.0.9, )"
             },
@@ -69,6 +77,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[9.0.4, )"
+            },
+            "iText7": {
+              "target": "Package",
+              "version": "[8.0.5, )"
             }
           },
           "imports": [

@@ -20,9 +20,11 @@ namespace RedSky.Api.Controllers
         public async Task<IActionResult> Upload([FromForm] IFormFile file)
         {
             if (file == null || file.Length == 0) return BadRequest("File is required");
-            if (!file.FileName.EndsWith(".xlsx", StringComparison.OrdinalIgnoreCase) && !file.FileName.EndsWith(".xls", StringComparison.OrdinalIgnoreCase))
+            if (!file.FileName.EndsWith(".xlsx", StringComparison.OrdinalIgnoreCase) && 
+                !file.FileName.EndsWith(".xls", StringComparison.OrdinalIgnoreCase) && 
+                !file.FileName.EndsWith(".csv", StringComparison.OrdinalIgnoreCase))
             {
-                return BadRequest("Only Excel files (.xlsx, .xls) are allowed");
+                return BadRequest("Only Excel files (.xlsx, .xls) and CSV files (.csv) are allowed");
             }
             try
             {

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RedSky.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cde7a09c88a8020635254d4c7f48fb9a1fe2b595")]
 [assembly: System.Reflection.AssemblyProductAttribute("RedSky.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RedSky.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

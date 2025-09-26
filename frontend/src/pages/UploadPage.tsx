@@ -20,7 +20,7 @@ export default function UploadPage() {
   const props: UploadProps = {
     name: 'file',
     maxCount: 1,
-    accept: '.xlsx,.xls',
+    accept: '.xlsx,.xls,.csv',
     customRequest: async (options: UploadRequestOption<any>) => {
       try {
         const { file, onSuccess } = options;

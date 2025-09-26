@@ -1,0 +1,27 @@
+const { createProxyMiddleware } = require("http-proxy-middleware");
+
+const target = process.env.REACT_APP_API_URL || "http://localhost:5034";
+const apiKey = process.env.REACT_APP_API_KEY || "dev-secret-change-me";
+
+module.exports = function (app) {
+  app.use(
+    "/api",
+    createProxyMiddleware({
+      target,
+      changeOrigin: true,
+      secure: false,
+      logLevel: 'debug',
+      onProxyReq: (proxyReq, req) => {
+        // Ensure API key is set
+        proxyReq.setHeader("X-API-KEY", apiKey);
+        
+        // Debug logs
+        console.log(`[PROXY] ${req.method} ${req.originalUrl} -> ${target}${proxyReq.path}`);
+      },
+      onError: (err, req, res) => {
+        console.error('[PROXY ERROR]', err);
+        res.status(500).json({ error: 'Proxy error' });
+      }
+    })
+  );
+};

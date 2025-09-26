@@ -10,8 +10,8 @@ namespace RedSky.Api.Security
         public const string SchemeName = "ApiKey";
         private readonly IConfiguration _config;
 
-        public ApiKeyAuthHandler(IOptionsMonitor<AuthenticationSchemeOptions> options, ILoggerFactory logger, UrlEncoder encoder, ISystemClock clock, IConfiguration config)
-            : base(options, logger, encoder, clock)
+        public ApiKeyAuthHandler(IOptionsMonitor<AuthenticationSchemeOptions> options, ILoggerFactory logger, UrlEncoder encoder, IConfiguration config)
+            : base(options, logger, encoder)
         {
             _config = config;
         }

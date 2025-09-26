@@ -5,11 +5,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RedSky.Api.Models
 {
-    public class Patient
+    public class Patient : BaseEntity
     {
-    [Key]
-    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    public int Id { get; set; }
 
         [Required]
         [MaxLength(64)]
